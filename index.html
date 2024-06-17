@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Meu Portifólio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#sobre-mim">Sobre mim</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="sobre-mim">
+        <h1>Sobre mim</h1>
+        <p>
+          Olá, meu nome é Leonardo da Silva, nascido em 21/07/1998 em Esteio,
+          Rio Grande do Sul.
+        </p>
+        <p>
+          Comecei a trabalhar aos 16 anos e me formei no ensino médio em 2016.
+          De 2016 a 2022, atuei em diversas áreas profissionais:
+        </p>
+        <p>De suporte de TI, barman e até com engenharia.</p>
+        <p>
+          Em dezembro de 2022, comecei na faculdade de Análise e desenvolvimento
+          de sistemas a fim de me tornar um desenvolvedor que a tanto tempo eu
+          queria.
+        </p>
+        <p>
+          Hoje estou no quarto semestre da faculdade faltando apenas 1 ano para
+          me formar.
+        </p>
+        <p>
+          Após esse 1 ano de faculdade já estou trabalhando com desenvolvimento
+          web e adquiri muitos conhecimentos em desenvolvimento web.
+        </p>
+        <p>
+          Sou um desenvolvedor web fullstack com experiência em
+          <b>HTML, CSS, JavaScript, React, Node </b> entre outras tecnologias.
+        </p>
+        <p>
+          Durante o tempo livre constumo escrever códigos a fim de aprender
+          novas tecnologias, e futuramente oportunidades de trabalho mais
+          desafiadoras.
+        </p>
+        <p>
+          Também tiro um tempo para jogar online com amigos, gosto de gêneros
+          como <b>FPS, MMORPG, Moba,</b> e principalmente jogos competitivos.
+        </p>
+        <p>
+          Meus futuros objetivos são encontrar oportunidades em que eu possa
+          aplicar e aprimorar meus conhecimentos utilizando as tecnologias que
+          estou estudando.
+        </p>
+      </section>
+
+      <section id="formacao">
+        <h1>Formação</h1>
+        <p>
+          Análise e Desenvolvimento de Sistemas, Uninter, (Previsão de
+          conclusão[07/2025])
+        </p>
+        <p>
+          Faltando apenas 1 ano para me formar já aprendi diversos conceitos e
+          estruturas que permitem e auxiliam a construção de sistemas.
+        </p>
+        <p>
+          Estudando assiduamente e me esforçando todos os dias para obter o
+          máximo de conhecimento que posso no momento.
+        </p>
+        <p>
+          Atualmente estudo conceitos como
+          <b>S.O.L.I.D., Design Patterns, Clean Code, TDD e POO </b>
+          (Programação Orientada a Objetos).
+        </p>
+        <p>
+          Também aprimorando meu inglês que já está em nível avançado, porém sem
+          nunca ter feito nenhum curso específico.
+        </p>
+      </section>
+
+      <section id="portfolio">
+        <h1>Portfólio</h1>
+        <p>
+          Abaixo estão alguns dos projetos que estou desenvolvendo atualmente
+          utilizando as tecnologias mais atuais:
+        </p>
+        <ul>
+          <li>
+            <a href="https://github.com/lezisilva163/dashboard-next">
+              Dashboard React + Next
+            </a>
+            <br />
+            É uma aplicação Front-end utilizando React e Next com bibliotecas
+            atuais como Tailwind CSS e shadcn ui.
+          </li>
+          <li>
+            <a href="https://github.com/lezisilva163/web-services">
+              API com NodeJS + Fastify + MongoDB
+            </a>
+            <br />
+            É uma aplicação Back-end feita em NodeJS, Typescript, Fastify e
+            MongoDB, com bibliotecas atuais como zod e mongoose.
+          </li>
+          <li>
+            <a href="https://github.com/lezisilva163/dashboard-api">
+              API REST construída com NodeJS, Typescript, Fastify e Prisma
+            </a>
+            <br />
+            Este projeto é uma API REST construída com NodeJS e Fastify, que
+            contém o back-end de um dashboard de usuários. Os endpoints realizam
+            consultas em uma base de dados PostgreSQL para buscar e retornar
+            informações específicas.
+          </li>
+        </ul>
+      </section>
+
+      <section id="contato">
+        <h1>Contato</h1>
+        <form
+          action="mailto:seu.email@exemplo.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="assunto">Assunto:</label>
+          <input type="text" id="assunto" name="assunto" required />
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+          <input type="submit" value="Enviar" />
+        </form>
+      </section>
+    </main>
+    <script>
+      // Função para scroll suave ao clicar nos links do menu
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const target = document.querySelector(this.getAttribute("href"));
+          const offsetTop = target.offsetTop;
+
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth",
+          });
+
+          // Marca o link como ativo
+          document.querySelectorAll("nav ul li a").forEach((link) => {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
